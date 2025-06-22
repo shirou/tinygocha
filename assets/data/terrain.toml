@@ -1,0 +1,41 @@
+# 地形効果定義ファイル
+
+[terrain_types.forest]
+name = "森"
+movement_modifier = 0.9  # 移動速度90%（改善）
+defense_modifier = 1.1   # 防御力110%
+archer_bonus = 1.2       # 弓系攻撃力120%
+mage_bonus = 1.0         # 魔術師系攻撃力100%
+infantry_bonus = 0.9     # 歩兵系攻撃力90%
+
+[terrain_types.mountain]
+name = "山"
+movement_modifier = 0.8  # 移動速度80%（改善）
+defense_modifier = 1.3   # 防御力130%
+archer_bonus = 1.1       # 弓系攻撃力110%
+mage_bonus = 1.3         # 魔術師系攻撃力130%
+infantry_bonus = 0.8     # 歩兵系攻撃力80%
+
+[terrain_types.plain]
+name = "平原"
+movement_modifier = 1.3  # 移動速度130%（改善）
+defense_modifier = 1.0   # 防御力100%
+archer_bonus = 1.0       # 弓系攻撃力100%
+mage_bonus = 1.0         # 魔術師系攻撃力100%
+infantry_bonus = 1.1     # 歩兵系攻撃力110%
+
+[terrain_types.fortress]
+name = "城塞"
+movement_modifier = 0.9  # 移動速度90%（改善）
+defense_modifier = 1.5   # 防御力150%
+archer_bonus = 1.3       # 弓系攻撃力130%
+mage_bonus = 1.1         # 魔術師系攻撃力110%
+infantry_bonus = 1.2     # 歩兵系攻撃力120%
+
+[terrain_types.town]
+name = "街"
+movement_modifier = 1.1  # 移動速度110%（改善）
+defense_modifier = 1.2   # 防御力120%
+archer_bonus = 1.0       # 弓系攻撃力100%
+mage_bonus = 1.2         # 魔術師系攻撃力120%
+infantry_bonus = 1.0     # 歩兵系攻撃力100%

@@ -1,0 +1,177 @@
+# 戦場レイアウト設定
+# スケール: 500m四方 = 5000px四方, 1px = 10cm
+
+# 森林戦場
+[layouts.forest_battlefield]
+name = "深い森"
+width = 5000
+height = 5000
+terrain_base = "forest"
+
+# 木々の配置
+[[layouts.forest_battlefield.objects]]
+type = "tree"
+positions = [
+    { x = 1000, y = 1000 }, { x = 1200, y = 1100 }, { x = 1400, y = 900 },
+    { x = 1800, y = 1300 }, { x = 2000, y = 1500 }, { x = 2200, y = 1200 },
+    { x = 2500, y = 1800 }, { x = 2800, y = 1600 }, { x = 3000, y = 2000 },
+    { x = 3200, y = 2200 }, { x = 3500, y = 1900 }, { x = 3800, y = 2100 },
+    { x = 1500, y = 2500 }, { x = 1800, y = 2800 }, { x = 2100, y = 2600 },
+    { x = 2400, y = 3000 }, { x = 2700, y = 3200 }, { x = 3000, y = 2900 },
+    { x = 3300, y = 3100 }, { x = 3600, y = 3300 }, { x = 3900, y = 3000 }
+]
+
+# 茂みの配置
+[[layouts.forest_battlefield.objects]]
+type = "bush"
+positions = [
+    { x = 800, y = 1500 }, { x = 1100, y = 1800 }, { x = 1600, y = 1400 },
+    { x = 2300, y = 1100 }, { x = 2600, y = 1400 }, { x = 2900, y = 1100 },
+    { x = 3400, y = 1600 }, { x = 3700, y = 1300 }, { x = 4000, y = 1800 },
+    { x = 1200, y = 2200 }, { x = 1700, y = 2000 }, { x = 2000, y = 2300 },
+    { x = 2800, y = 2500 }, { x = 3100, y = 2800 }, { x = 3500, y = 2400 }
+]
+
+# 山岳戦場
+[layouts.mountain_battlefield]
+name = "険しい山道"
+width = 5000
+height = 5000
+terrain_base = "mountain"
+
+# 岩石の配置
+[[layouts.mountain_battlefield.objects]]
+type = "rock"
+positions = [
+    { x = 1200, y = 800 }, { x = 1500, y = 1000 }, { x = 1800, y = 700 },
+    { x = 2100, y = 1200 }, { x = 2400, y = 900 }, { x = 2700, y = 1100 },
+    { x = 3000, y = 800 }, { x = 3300, y = 1300 }, { x = 3600, y = 1000 },
+    { x = 3900, y = 1200 }, { x = 4200, y = 900 }, { x = 4500, y = 1100 },
+    { x = 1000, y = 2000 }, { x = 1400, y = 2200 }, { x = 1700, y = 1900 },
+    { x = 2200, y = 2400 }, { x = 2500, y = 2100 }, { x = 2800, y = 2300 },
+    { x = 3200, y = 2000 }, { x = 3500, y = 2500 }, { x = 3800, y = 2200 },
+    { x = 4100, y = 2400 }, { x = 4400, y = 2100 }, { x = 4700, y = 2300 }
+]
+
+# 崖の配置（移動不可エリア）
+[[layouts.mountain_battlefield.objects]]
+type = "cliff"
+areas = [
+    { x1 = 2000, y1 = 3000, x2 = 3000, y2 = 3500 },
+    { x1 = 1500, y1 = 3800, x2 = 2500, y2 = 4200 },
+    { x1 = 3500, y1 = 3200, x2 = 4000, y2 = 3800 }
+]
+
+# 平原戦場
+[layouts.plain_battlefield]
+name = "広大な平原"
+width = 5000
+height = 5000
+terrain_base = "plain"
+
+# 小さな丘
+[[layouts.plain_battlefield.objects]]
+type = "hill"
+positions = [
+    { x = 1500, y = 1500, radius = 200 },  # 20m半径の丘
+    { x = 3500, y = 2000, radius = 150 },  # 15m半径の丘
+    { x = 2500, y = 3500, radius = 180 }   # 18m半径の丘
+]
+
+# 川の配置
+[[layouts.plain_battlefield.objects]]
+type = "river"
+path = [
+    { x = 0, y = 2000 }, { x = 1000, y = 2100 }, { x = 2000, y = 2000 },
+    { x = 3000, y = 2200 }, { x = 4000, y = 2100 }, { x = 5000, y = 2000 }
+]
+width = 20  # 2m幅
+
+# 城塞戦場
+[layouts.fortress_battlefield]
+name = "古い要塞"
+width = 5000
+height = 5000
+terrain_base = "fortress"
+
+# 城壁の配置
+[[layouts.fortress_battlefield.objects]]
+type = "wall"
+segments = [
+    { x1 = 2000, y1 = 1500, x2 = 3000, y2 = 1500 },  # 北壁
+    { x1 = 3000, y1 = 1500, x2 = 3000, y2 = 2500 },  # 東壁
+    { x1 = 3000, y1 = 2500, x2 = 2000, y2 = 2500 },  # 南壁
+    { x1 = 2000, y1 = 2500, x2 = 2000, y2 = 1500 }   # 西壁
+]
+thickness = 20  # 2m厚
+
+# 城門
+[[layouts.fortress_battlefield.objects]]
+type = "gate"
+positions = [
+    { x = 2500, y = 1500, width = 40 },  # 北門
+    { x = 2500, y = 2500, width = 40 }   # 南門
+]
+
+# 塔
+[[layouts.fortress_battlefield.objects]]
+type = "tower"
+positions = [
+    { x = 2000, y = 1500 },  # 北西塔
+    { x = 3000, y = 1500 },  # 北東塔
+    { x = 3000, y = 2500 },  # 南東塔
+    { x = 2000, y = 2500 }   # 南西塔
+]
+
+# 建物
+[[layouts.fortress_battlefield.objects]]
+type = "building"
+positions = [
+    { x = 2200, y = 1800 },  # 兵舎
+    { x = 2800, y = 1800 },  # 武器庫
+    { x = 2500, y = 2200 }   # 司令部
+]
+
+# 村落戦場
+[layouts.village_battlefield]
+name = "小さな村"
+width = 5000
+height = 5000
+terrain_base = "town"
+
+# 家屋の配置
+[[layouts.village_battlefield.objects]]
+type = "house"
+positions = [
+    { x = 1800, y = 1600 }, { x = 2000, y = 1800 }, { x = 2200, y = 1600 },
+    { x = 2400, y = 1800 }, { x = 2600, y = 1600 }, { x = 2800, y = 1800 },
+    { x = 1900, y = 2200 }, { x = 2100, y = 2400 }, { x = 2300, y = 2200 },
+    { x = 2500, y = 2400 }, { x = 2700, y = 2200 }, { x = 2900, y = 2400 }
+]
+
+# 道路
+[[layouts.village_battlefield.objects]]
+type = "road"
+paths = [
+    # メイン道路（東西）
+    { x1 = 0, y1 = 2000, x2 = 5000, y2 = 2000, width = 30 },
+    # 交差道路（南北）
+    { x1 = 2500, y1 = 0, x2 = 2500, y2 = 5000, width = 20 }
+]
+
+# 井戸
+[[layouts.village_battlefield.objects]]
+type = "well"
+positions = [
+    { x = 2500, y = 2000 }  # 村の中央
+]
+
+# 畑
+[[layouts.village_battlefield.objects]]
+type = "field"
+areas = [
+    { x1 = 1000, y1 = 1000, x2 = 1800, y2 = 1400 },
+    { x1 = 3200, y1 = 1000, x2 = 4000, y2 = 1400 },
+    { x1 = 1000, y1 = 2600, x2 = 1800, y2 = 3000 },
+    { x1 = 3200, y1 = 2600, x2 = 4000, y2 = 3000 }
+]

@@ -1,0 +1,175 @@
+# ユニット能力詳細設定
+# スケール: 500m四方 = 5000px四方, 1px = 10cm
+
+# 歩兵系ユニット
+[abilities.infantry]
+# 移動能力
+walk_speed = 13.9      # 5km/h = 13.9px/s
+run_speed = 33.3       # 12km/h = 33.3px/s
+charge_speed = 41.7    # 15km/h = 41.7px/s
+stamina = 100          # スタミナ値
+stamina_regen = 10     # スタミナ回復/秒
+
+# 戦闘能力
+melee_range = 15       # 1.5m = 15px
+attack_cooldown = 2.0  # 2秒間隔
+charge_damage_bonus = 1.5  # 突撃時ダメージ1.5倍
+
+# 知覚能力
+sight_range = 5000     # 500m = 5000px（戦場全体）
+
+# 隊形能力
+formation_bonus = 1.1  # 隊形時攻撃力10%向上
+leadership_range = 100 # 10m = 100px
+
+[abilities.heavy_infantry]
+# 移動能力
+walk_speed = 8.3       # 3km/h = 8.3px/s
+run_speed = 22.2       # 8km/h = 22.2px/s
+charge_speed = 27.8    # 10km/h = 27.8px/s
+stamina = 120          # 高スタミナ
+stamina_regen = 8      # 回復やや遅い
+
+# 戦闘能力
+melee_range = 20       # 2m長槍 = 20px
+attack_cooldown = 2.5  # やや遅い攻撃
+charge_damage_bonus = 2.0  # 高い突撃ダメージ
+
+# 知覚能力
+sight_range = 5000     # 500m = 5000px（戦場全体）
+
+# 防御能力
+shield_block_chance = 0.3  # 30%ブロック率
+armor_reduction = 5        # 5ダメージ軽減
+
+# 弓兵系ユニット
+[abilities.archer]
+# 移動能力
+walk_speed = 11.1      # 4km/h = 11.1px/s
+run_speed = 22.2       # 8km/h = 22.2px/s
+stamina = 80           # 低スタミナ
+stamina_regen = 12     # 回復早い
+
+# 射撃能力
+min_range = 50         # 最小射程 5m = 50px
+max_range = 800        # 最大射程 80m = 800px
+effective_range = 600  # 有効射程 60m = 600px
+reload_time = 3.0      # 3秒リロード
+arrow_speed = 500      # 矢の速度 500px/s
+
+# 知覚能力
+sight_range = 5000     # 500m = 5000px（戦場全体）
+
+# 精度設定
+accuracy_base = 0.8    # 基本命中率80%
+accuracy_distance_penalty = 0.0005  # 距離ペナルティ
+accuracy_moving_penalty = 0.3       # 移動時ペナルティ
+
+[abilities.longbow_archer]
+# 移動能力
+walk_speed = 8.3       # 3km/h = 8.3px/s（重い弓）
+run_speed = 19.4       # 7km/h = 19.4px/s
+stamina = 90
+stamina_regen = 10
+
+# 射撃能力
+min_range = 100        # 最小射程 10m = 100px
+max_range = 1200       # 最大射程 120m = 1200px
+effective_range = 1000 # 有効射程 100m = 1000px
+reload_time = 4.0      # 4秒リロード
+arrow_speed = 600      # 高速矢
+
+# 精度設定
+accuracy_base = 0.85   # 高精度
+accuracy_distance_penalty = 0.0003
+accuracy_moving_penalty = 0.4
+
+# 騎兵系ユニット
+[abilities.cavalry]
+# 移動能力
+walk_speed = 16.7      # 6km/h = 16.7px/s
+trot_speed = 41.7      # 15km/h = 41.7px/s
+gallop_speed = 69.4    # 25km/h = 69.4px/s
+charge_speed = 111.1   # 40km/h = 111.1px/s
+stamina = 150          # 高スタミナ
+stamina_regen = 15     # 高回復
+
+# 戦闘能力
+melee_range = 25       # 2.5m騎槍 = 25px
+attack_cooldown = 1.8  # 高速攻撃
+charge_damage_bonus = 3.0  # 高い突撃ダメージ
+trample_damage = 10    # 踏みつけダメージ
+
+# 機動性
+turn_radius = 30       # 3m = 30px 最小回転半径
+acceleration = 50      # 加速度 50px/s²
+deceleration = 100     # 減速度 100px/s²
+
+# 魔術師系ユニット
+[abilities.mage]
+# 移動能力
+walk_speed = 11.1      # 4km/h = 11.1px/s
+run_speed = 16.7       # 6km/h = 16.7px/s
+stamina = 60           # 低スタミナ
+stamina_regen = 8      # 低回復
+
+# 魔法能力
+mana = 100             # マナ値
+mana_regen = 5         # マナ回復/秒
+cast_time = 2.0        # 詠唱時間2秒
+spell_range = 600      # 60m = 600px
+
+# 魔法種別
+[abilities.mage.spells.fireball]
+damage = 25
+range = 500            # 50m = 500px
+area_radius = 30       # 3m = 30px範囲
+mana_cost = 20
+cast_time = 2.0
+
+[abilities.mage.spells.lightning]
+damage = 30
+range = 800            # 80m = 800px
+area_radius = 0        # 単体攻撃
+mana_cost = 25
+cast_time = 1.5
+
+[abilities.mage.spells.ice_spear]
+damage = 20
+range = 600            # 60m = 600px
+slow_effect = 0.5      # 50%減速
+slow_duration = 5.0    # 5秒間
+mana_cost = 15
+cast_time = 1.8
+
+# 特殊ユニット
+[abilities.scout]
+# 移動能力
+walk_speed = 19.4      # 7km/h = 19.4px/s
+run_speed = 41.7       # 15km/h = 41.7px/s
+stamina = 120
+stamina_regen = 15
+
+# 索敵能力
+sight_range = 5000     # 500m = 5000px（戦場全体）
+stealth_detection = 1000  # 100m = 1000px
+movement_silent = true    # 静音移動
+
+# 戦闘能力（弱い）
+melee_range = 10       # 1m = 10px
+attack_cooldown = 1.5  # 高速だが弱い攻撃
+
+[abilities.siege_engine]
+# 移動能力（非常に遅い）
+walk_speed = 2.8       # 1km/h = 2.8px/s
+stamina = 200
+stamina_regen = 5
+
+# 攻城能力
+siege_range = 1500     # 150m = 1500px
+siege_damage = 100     # 高ダメージ
+reload_time = 10.0     # 10秒リロード
+area_radius = 50       # 5m = 50px範囲
+
+# 建物への特効
+building_damage_bonus = 3.0  # 建物に3倍ダメージ

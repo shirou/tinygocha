@@ -1,0 +1,31 @@
+# ゴチャキャラバトル 設定ファイル
+
+[graphics]
+# フォントファイルのパス（空の場合はデフォルトのMPlus1pを使用）
+font_path = ""
+# フォントサイズ
+font_size = 16
+# UI スケール
+ui_scale = 1.0
+# FPS表示
+show_fps = false
+# VSync
+vsync = true
+
+[audio]
+# マスターボリューム (0.0 - 1.0)
+master_volume = 0.8
+# 効果音ボリューム (0.0 - 1.0)
+sfx_volume = 0.7
+# BGMボリューム (0.0 - 1.0)
+bgm_volume = 0.6
+# 音声有効
+enabled = true
+
+[game]
+# 言語設定
+language = "ja"
+# オートセーブ
+auto_save = true
+# チュートリアル表示
+show_tutorial = true

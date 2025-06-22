@@ -1,0 +1,106 @@
+# 戦場設定ファイル
+# スケール: 500m四方 = 5000px四方, 1px = 10cm
+
+[battlefield]
+# 戦場サイズ
+width = 5000      # 500m
+height = 5000     # 500m
+scale = 0.1       # 1px = 0.1m = 10cm
+
+# 表示設定
+viewport_width = 1024   # 表示ウィンドウ幅
+viewport_height = 768   # 表示ウィンドウ高さ
+
+# カメラ設定
+[camera]
+# 初期位置（戦場中央）
+initial_x = 2500  # 250m地点
+initial_y = 2500  # 250m地点
+
+# スクロール設定（高速化）
+scroll_speed = 800.0      # 800px/s = 80m/s (高速化)
+edge_scroll_speed = 400.0 # エッジスクロール速度
+key_scroll_speed = 500.0  # キーボードスクロール速度
+scroll_border = 50        # 画面端50pxでスクロール開始
+scroll_acceleration = 3.0 # スクロール加速度（高速化）
+
+# ズーム設定
+zoom_min = 0.25    # 最小ズーム（全体俯瞰）
+zoom_max = 2.0     # 最大ズーム（詳細表示）
+zoom_default = 1.0 # デフォルトズーム
+zoom_step = 0.25   # ズームステップ
+zoom_speed = 4.0   # ズーム速度（高速化）
+
+# パフォーマンス設定
+[performance]
+# 描画最適化
+culling_margin = 100      # 画面外+100pxまで描画
+max_visible_units = 500   # 最大同時表示ユニット数
+lod_distance = 1000       # 1000px以上離れたら簡略描画
+
+# 物理演算設定
+physics_step = 0.016667   # 60FPS = 1/60秒
+collision_grid_size = 50  # 50px単位でコリジョングリッド
+
+# 視界設定
+[visibility]
+# 戦場の霧（未実装）
+fog_of_war = false
+fog_reveal_radius = 1000  # 1000px = 100m
+
+# ユニット視界（500m知覚範囲に拡大）
+default_sight_range = 5000  # 5000px = 500m（戦場全体をカバー）
+max_sight_range = 5000      # 5000px = 500m
+
+# 地形オブジェクト設定
+[terrain_objects]
+# 森林
+[terrain_objects.tree]
+size = 50              # 50px = 5m直径
+collision_radius = 25  # 25px = 2.5m
+blocks_movement = true
+blocks_sight = false
+
+# 岩石
+[terrain_objects.rock]
+size = 20              # 20px = 2m
+collision_radius = 10  # 10px = 1m
+blocks_movement = true
+blocks_sight = true
+
+# 建物
+[terrain_objects.building]
+size = 50              # 50px = 5m
+collision_radius = 25  # 25px = 2.5m
+blocks_movement = true
+blocks_sight = true
+
+# 川
+[terrain_objects.river]
+width = 20             # 20px = 2m幅
+movement_penalty = 0.5 # 移動速度50%
+blocks_sight = false
+
+# UI設定
+[ui]
+# ミニマップ
+minimap_size = 200        # 200px四方
+minimap_scale = 0.04      # 戦場の1/25サイズ
+minimap_position_x = 824  # 右上配置
+minimap_position_y = 10
+
+# ユニット選択
+selection_radius = 20     # 20px = 2m
+multi_select_enabled = true
+
+# 射程表示
+range_circle_segments = 32  # 射程円の分割数
+range_alpha = 128          # 射程表示の透明度
+
+# デバッグ設定
+[debug]
+show_grid = false          # グリッド表示
+show_collision = false     # コリジョン表示
+show_pathfinding = false   # 経路探索表示
+show_coordinates = false   # 座標表示
+show_performance = false   # パフォーマンス情報表示

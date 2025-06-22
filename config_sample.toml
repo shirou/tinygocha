@@ -1,0 +1,47 @@
+# ゴチャキャラバトル 設定ファイル サンプル
+# このファイルをconfig.tomlにコピーして使用してください
+
+[graphics]
+# カスタムフォントファイルのパス（空の場合はデフォルトのMPlus1pを使用）
+# 例: "assets/fonts/NotoSansCJK-Regular.ttf"
+font_path = ""
+
+# フォントサイズ
+font_size = 16
+
+# UI スケール（1.0 = 100%）
+ui_scale = 1.0
+
+# FPS表示（デバッグ用）
+show_fps = false
+
+# VSync有効
+vsync = true
+
+[audio]
+# マスターボリューム (0.0 - 1.0)
+master_volume = 0.8
+
+# 効果音ボリューム (0.0 - 1.0)
+sfx_volume = 0.7
+
+# BGMボリューム (0.0 - 1.0)
+bgm_volume = 0.6
+
+# 音声有効
+enabled = true
+
+[game]
+# 言語設定 ("ja" = 日本語, "en" = 英語)
+language = "ja"
+
+# オートセーブ有効
+auto_save = true
+
+# チュートリアル表示
+show_tutorial = true
+
+# 推奨フォント設定例:
+# Windows: "C:/Windows/Fonts/msgothic.ttc" (MS ゴシック)
+# macOS: "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc"
+# Linux: "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc"
